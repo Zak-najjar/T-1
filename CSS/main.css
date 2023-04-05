@@ -115,18 +115,29 @@ header {
   content: '';
   margin: 0;
   padding: 0;
-  top: 50px;
-  right: 100px;
+  top: 30px;
+  right: 5px;
   min-width: 200px;
   z-index: 1;
   background-color: #f6f6f6;
+  direction: ltr;
 }
 
-.list ul li {
-  padding: 15px;
+.list ul li:nth-child(1),
+  li:nth-child(2),
+  li:nth-child(3)
+  {
   border-bottom: 1px solid rgb(183, 182, 182);
 }
 
-.list:hover ul li {
+a {
+  color:  black;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+}
+
+a:hover {
   margin-left: 10px;
+  transition: all var(--main-duration);
 }
