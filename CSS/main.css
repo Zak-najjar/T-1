@@ -145,6 +145,24 @@ a:hover {
 .landing {
   background-image: url(../imgs/land.jpg);
   background-size: cover;
-  margin: 0;
   height: calc(100vh - 64px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing .intro-text {
+  text-align: center;
+  width: 320px;
+  max-width: 320px;
+}
+.landing .intro-text h1 {
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 50px;
+  margin: 0;
+}
+.landing .intro-text p {
+  font-size: 19px;
+  line-height: 1.8;
 }
