@@ -143,5 +143,8 @@ a:hover {
 }
 
 .landing {
-  back
+  background-image: url(../imgs/land.jpg);
+  background-size: cover;
+  margin: 0;
+  height: calc(100vh - 64px);
 }
