@@ -15,11 +15,6 @@ body  {
   --main-duration: 0.5s;
 }
 
-@media (min-width: 576px) { 
-.container {
-  width: 556px;
-}
-}
 @media (max-width: 767px) {
 .special-heading {
   font-size: 60px !important;
@@ -39,7 +34,11 @@ body  {
 .sers i {
   text-align: center;
 }
-
+  .container {
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 @media (min-width: 768px) { 
 .container {
@@ -297,4 +296,109 @@ a:hover {
   width: 100px;
   height: 450px;
   z-index: -1;
+}
+
+.portfolio {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: rgba(224,224,224,255);
+}
+
+.portfolio .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  text-align: end;
+  margin-top: 85px;
+}
+
+.pro {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-bottom: 30px;
+  text-align: start;
+}
+.pro-text {
+  padding: 20px;
+  line-height: 1.6;
+}
+.pro-text h3 {
+  margin: 0;
+}
+.pro-text p {
+  color: var(--secondary-color);
+  margin-bottom: 0;
+}
+
+
+
+.about {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.about .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 1fr);
+  margin-top: 100px;
+}
+
+.about-text {
+  grid-area: 1 / 2;
+  margin-left: 250px;
+  line-height: 1.8;
+  width: 640px;
+}
+.about-content .about-text > h4 {
+  margin-bottom: 70px;
+}
+
+.about-text hr {
+  height: 1px;
+  background-color: var(--main-color);
+  width: 310px;
+  margin-right: 360px;
+}
+.about-text p {
+  margin-top: 30px;
+  color: #777;
+}
+
+.about-content> .image {
+  position: relative;
+}
+
+.about-content > .image::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  transform: translateX(-20px) translateY(-40px);
+  background-color: rgba(214,215,216,255);
+  width: 100px;
+  height: 450px;
+  z-index: -1;
+}
+
+.about-content > .image::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  transform: translateX(150px) translateY(-40px);
+  background-color: white;
+  width: 120px;
+  height: 300px;
+  z-index: -1;
+  border-left: 80px solid var(--main-color);
+  border-bottom: 80px solid var(--main-color);
 }
