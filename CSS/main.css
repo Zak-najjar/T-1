@@ -178,11 +178,11 @@ header a {
   text-decoration: none;
   padding: 15px;
   display: block;
+  transition: all var(--main-duration);
 }
 
 header a:hover {
   margin-left: 10px;
-  transition: all var(--main-duration);
 }
 
 .landing {
