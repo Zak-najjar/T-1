@@ -34,15 +34,25 @@ body  {
 .sers i {
   text-align: center;
 }
-  .container {
-    margin: 0;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
 }
 @media (min-width: 768px) { 
 .container {
   width: 748px;  
+}
+}
+@media (max-width:991px) {
+.about-content {
+  flex-direction: column;
+  text-align: center;
+}
+.image::after {
+  display: none;
+}
+.image::before {
+  display: none;
+}
+.about-text  {
+  max-width: none !important;
 }
 }
 @media (min-width: 992px) { 
@@ -58,6 +68,10 @@ body  {
   .services-content .col:nth-child(3) {
     display: none;
   }
+  .about-text {
+    max-width: 440px;
+    padding-left: 0 !important;
+  }
 }
 @media (min-width: 1200px) { 
 .container {
@@ -70,13 +84,15 @@ header {
   padding: 20px;
 }
 
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
 .container {
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .logo {
@@ -157,14 +173,14 @@ header {
   border-bottom: 1px solid rgb(183, 182, 182);
 }
 
-a {
+header a {
   color:  black;
   text-decoration: none;
   padding: 15px;
   display: block;
 }
 
-a:hover {
+header a:hover {
   margin-left: 10px;
   transition: all var(--main-duration);
 }
@@ -343,29 +359,24 @@ a:hover {
   padding-bottom: 60px;
 }
 
-.about .container {
-  display: flex;
-  flex-direction: column;
-}
 
 .about-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 1fr);
+  display: flex;
+  justify-content: space-between;
   margin-top: 100px;
 }
 
 .about-text {
-  grid-area: 1 / 2;
-  margin-left: 250px;
-  line-height: 1.8;
-  width: 640px;
+  line-height: 2;
+  flex: 1;
+  padding-left: 230px;
 }
 .about-content .about-text > h4 {
   margin-bottom: 70px;
 }
 
 .about-text hr {
-  height: 1px;
+  height: 1.3px;
   background-color: var(--main-color);
   width: 310px;
   margin-right: 360px;
@@ -401,4 +412,57 @@ a:hover {
   z-index: -1;
   border-left: 80px solid var(--main-color);
   border-bottom: 80px solid var(--main-color);
+}
+
+.contact {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+  background-color: rgba(224,224,224,255);
+  font-size: 30px;
+}
+.contact .container {
+  display: flex;
+  flex-direction: column;
+}
+.contact h3 {
+  font-size: 1em;
+  margin-top: 100px;
+  color: var(--secondary-color);
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+.contact a {
+  color: var(--main-color);
+  font-weight: 800;
+  text-decoration: none;
+}
+.social { 
+  display: flex;
+  justify-content: center;
+  font-size: .5em;
+  margin-top: 20px;
+  flex: 1;
+}
+
+.social i {
+  width: 30px;
+  height: 10px;
+}
+
+
+footer {
+  padding: 30px 10px;
+  text-align: center;
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+footer span {
+  color: var(--main-color);
+}
+
+footer h6 {
+  margin: 5px 0;
+  padding: 0;
 }
